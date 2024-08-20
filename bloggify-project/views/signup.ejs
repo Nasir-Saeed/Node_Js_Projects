@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+        <title>Sign Up | Blog App</title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+        <div class="container mt-5">
+            <h1 class="text-center">Sign Up</h1>
+            <form action="/user/signup" method="post">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingFullName" name="fullName" placeholder="full name">
+                    <label for="floatingFullName">Full Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingEmail" name="email" placeholder="email">
+                    <label for="floatingEmail">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" name="password"
+                        placeholder="password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <button type="submit" class="btn btn-dark mt-2">Submit</button>
+            </form>
+        </div>
+
+        <%- include('./partials/script') %>
+</body>
+
+</html>
